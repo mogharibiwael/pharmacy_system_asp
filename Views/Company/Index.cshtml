@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PMS.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h4>🏭 Company</h4>
+<br />
+<p>This page contains the details of medicine manufactures in PMS.</p>
+<hr />
+<br />
+<p>
+    @Html.ActionLink("+🏭 Add Company", "Create","Company", null,new{@class="btn btn-info"})
+</p>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Alert ❗</strong> @TempData["Message"].
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+              Contact
+            </th>
+            <th>
+               Address
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","Edit","Company", new { Id = item.Id},new { @class="btn btn-warning btn-sm"}) |
+                @Html.ActionLink("Delete","Delete","Company", new { Id = item.Id},new { @class="btn btn-danger btn-sm " })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
