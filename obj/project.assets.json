@@ -31,6 +31,22 @@
           }
         }
       },
+      "LazZiya.ExpressLocalization/4.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -609,6 +625,38 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Localization/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Localization.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Localization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Localization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Localization.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Localization.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Localization.Abstractions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/8.0.0": {
@@ -2606,6 +2654,29 @@
         "logo.png"
       ]
     },
+    "LazZiya.ExpressLocalization/4.0.4": {
+      "sha512": "qA4iHvWtRajnAGYUHzm493RbqAYPgk7xVqn2WHupd0gLeKMdXsV2PoSMCceCVb1BOhjbJLmBdAkR3UfzHIvpZQ==",
+      "type": "package",
+      "path": "lazziya.expresslocalization/4.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lazziya.expresslocalization.4.0.4.nupkg.sha512",
+        "lazziya.expresslocalization.nuspec",
+        "lib/netcoreapp2.0/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.0/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp2.1/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.1/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp2.2/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.2/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp3.0/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp3.0/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp3.1/LazZiya.ExpressLocalization.xml",
+        "license.txt"
+      ]
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -3435,6 +3506,44 @@
         "microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Localization/8.0.0": {
+      "sha512": "I4xyK9RaXyJBkU5+jQpkZITR/54tXGbdt5CsBmogf8Irrz+RXXsp1zJgrmQzxEOpxj5VMAA/GQ4SGZMeM5nVSg==",
+      "type": "package",
+      "path": "microsoft.extensions.localization/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Localization.dll",
+        "lib/net462/Microsoft.Extensions.Localization.xml",
+        "lib/net8.0/Microsoft.Extensions.Localization.dll",
+        "lib/net8.0/Microsoft.Extensions.Localization.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.xml",
+        "microsoft.extensions.localization.8.0.0.nupkg.sha512",
+        "microsoft.extensions.localization.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Localization.Abstractions/8.0.0": {
+      "sha512": "LIMzXjjzv7o3tx3XXvQVHNcrMNPfSoUp4R/YJucdyBixJGRp5p8v2rF1CnRbo+wwtzB4Se/gJYyUpNN8F/TMGw==",
+      "type": "package",
+      "path": "microsoft.extensions.localization.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Localization.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Localization.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml",
+        "microsoft.extensions.localization.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.localization.abstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/8.0.0": {
@@ -7998,10 +8107,12 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "DataAccess >= 1.0.0",
+      "LazZiya.ExpressLocalization >= 4.0.4",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.17",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
+      "Microsoft.Extensions.Localization >= 8.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "MySql.Data >= 8.0.12",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.0"
@@ -8055,6 +8166,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "LazZiya.ExpressLocalization": {
+            "target": "Package",
+            "version": "[4.0.4, )"
+          },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[5.0.17, )"
@@ -8072,6 +8187,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Microsoft.Extensions.Localization": {
             "target": "Package",
             "version": "[8.0.0, )"
           },

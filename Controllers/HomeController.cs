@@ -1,5 +1,7 @@
 ﻿using DataAccess.Data;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
@@ -31,6 +33,20 @@ namespace PMS.Controllers
         {
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture)
+        {
+            if (!string.IsNullOrEmpty(culture))
+            {
+                Response.Cookies.Append(
+                    CookieRequestCultureProvider.DefaultCookieName,
+                    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                    new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                );
+            }
+            return Redirect(Request.Headers["Referer"].ToString());
         }
         public IActionResult Auth(string email, string pwd)
         {

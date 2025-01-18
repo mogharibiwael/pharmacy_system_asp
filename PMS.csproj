@@ -19,11 +19,36 @@
     </PackageReference>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
     <PackageReference Include="MySql.Data" Version="8.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.0" />
+    <PackageReference Include="LazZiya.ExpressLocalization" Version="4.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Recources\Resources.Ar" />
+    <None Remove="Resources\" />
+    <None Remove="Localization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\SharedResource.ar.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Recources\ResourcesAr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Recources\ResourcesAr.Designer.cs">
+      <DependentUpon>Resources.Ar.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Localization\" />
   </ItemGroup>
 </Project>

@@ -1,112 +1,125 @@
 ﻿@model PMS.Models.DashboardData
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = Localizer["Home"];
     Layout = "~/Views/Shared/_LayoutDash.cshtml";
 }
 
 <center>
-    <p style="color:Black;font-size: 35px;"><strong>P</strong>haramacy<strong> M</strong>anagement<strong> S</strong>ystem 💊</p>
+    <p style="color:Black;font-size: 35px;">
+        @Html.Raw(Localizer["PharmacyManagementSystem"].Value)
+    </p>
 </center>
-<br/>
 
+<br />
 
 <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-dark text-white">
-                        <h4 class="my-0 fw-normal">📦 Stocks</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total stock items</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.StockCount<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","Stock",null,new { @class="w-100 btn btn-lg btn-outline-dark" })
-                    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-dark text-white">
+                    <h4 class="my-0 fw-normal">📦 @Localizer["Stocks"]</h4>
                 </div>
-            </div>
-
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-success text-white">
-                        <h4 class="my-0 fw-normal">💵 Sales</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total sale records</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.SaleCount<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","Sale",null,new { @class="w-100 btn btn-lg btn-outline-success" })
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-warning text-white">
-                        <h4 class="my-0 fw-normal">🏥 Retailers</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total registered retailers</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.RetailCount<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","Retail",null,new { @class="w-100 btn btn-lg btn-outline-warning" })
-                    </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalStockItems"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.StockCount</h1>
+                    <a href="@Url.Action("Index", "Stock")" class="w-100 btn btn-lg btn-outline-dark">
+                        @Localizer["Enter"]
+                    </a>
                 </div>
             </div>
         </div>
 
-
-        <!--Next Row-->
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-primary text-white">
-                        <h4 class="my-0 fw-normal">💊 Medicines</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total medicines available</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.RegisteredMed<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","Medicine",null,new { @class="w-100 btn btn-lg btn-outline-primary" })
-                    </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-success text-white">
+                    <h4 class="my-0 fw-normal">💵 @Localizer["Sales"]</h4>
                 </div>
-            </div>
-
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-light text-black">
-                        <h4 class="my-0 fw-normal">🏭 Manufactures</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total registered medicine manufactures</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.Company<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","Company",null,new { @class="w-100 btn btn-lg btn-outline-dark text-black" })
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                    <div class="card-header py-3 bg-info text-white">
-                        <h4 class="my-0 fw-normal">🧑‍💻 Users</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total registered users</li>
-                        </ul>
-                        <h1 class="card-title pricing-card-title">@Model.UserCount<small class="text-muted fw-light"></small></h1>
-                        @Html.ActionLink("Enter", "Index","UserManagement",null,new { @class="w-100 btn btn-lg btn-outline-info" })
-                    </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalSaleRecords"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.SaleCount</h1>
+                    <a href="@Url.Action("Index", "Sale")" class="w-100 btn btn-lg btn-outline-success">
+                        @Localizer["Enter"]
+                    </a>
                 </div>
             </div>
         </div>
 
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-warning text-white">
+                    <h4 class="my-0 fw-normal">🏥 @Localizer["Retailers"]</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalRetailers"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.RetailCount</h1>
+                    <a href="@Url.Action("Index", "Retail")" class="w-100 btn btn-lg btn-outline-warning">
+                        @Localizer["Enter"]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Next Row -->
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-primary text-white">
+                    <h4 class="my-0 fw-normal">💊 @Localizer["Medicines"]</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalMedicines"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.RegisteredMed</h1>
+                    <a href="@Url.Action("Index", "Medicine")" class="w-100 btn btn-lg btn-outline-primary">
+                        @Localizer["Enter"]
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-light text-black">
+                    <h4 class="my-0 fw-normal">🏭 @Localizer["Manufacturers"]</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalManufacturers"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.Company</h1>
+                    <a href="@Url.Action("Index", "Company")" class="w-100 btn btn-lg btn-outline-dark text-black">
+                        @Localizer["Enter"]
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3 bg-info text-white">
+                    <h4 class="my-0 fw-normal">🧑‍💻 @Localizer["Users"]</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>@Localizer["TotalUsers"]</li>
+                    </ul>
+                    <h1 class="card-title pricing-card-title">@Model.UserCount</h1>
+                    <a href="@Url.Action("Index", "UserManagement")" class="w-100 btn btn-lg btn-outline-info">
+                        @Localizer["Enter"]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
- 

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D8tXcOHvKQg=",
+  "dgSpecHash": "ykSLSnXjA+c=",
   "success": true,
   "projectFilePath": "/Users/mymac/Downloads/Pharmacy-Management-System-main/PMS.csproj",
   "expectedPackageFiles": [
     "/Users/mymac/.nuget/packages/google.protobuf/3.5.1/google.protobuf.3.5.1.nupkg.sha512",
     "/Users/mymac/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/mymac/.nuget/packages/lazziya.expresslocalization/4.0.4/lazziya.expresslocalization.4.0.4.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/5.0.17/microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/5.0.17/microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.17.nupkg.sha512",
@@ -31,6 +32,8 @@
     "/Users/mymac/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.extensions.dependencymodel/8.0.0/microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "/Users/mymac/.nuget/packages/microsoft.extensions.localization/8.0.0/microsoft.extensions.localization.8.0.0.nupkg.sha512",
+    "/Users/mymac/.nuget/packages/microsoft.extensions.localization.abstractions/8.0.0/microsoft.extensions.localization.abstractions.8.0.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/mymac/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
